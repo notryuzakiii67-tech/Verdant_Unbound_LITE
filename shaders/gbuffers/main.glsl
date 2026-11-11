@@ -256,6 +256,30 @@ void main() {
     
     // Sky color calculation (efficient approximation)
     vec3 skyColor = calculateSkyColor(time, weather);
+    
+    // 3D Animated Aurora Effect (Lightweight)
+    vec3 auroraColor = calculateAurora(vec3(fragTexcoord.x, 50.0, fragTexcoord.y), time, weather);
+    skyColor += auroraColor;
+    
+    // Lightweight Godrays
+    vec3 godrays = calculateGodrays(normalize(vec3(0.5, 0.7, 0.5)), fragTexcoord, time, weather);
+    skyColor += godrays;
+    
+    // Round Sun/Moon (Complementary Unbound Style)
+    vec2 sunPos = calculateRoundCelestialPosition(time, true);
+    vec2 moonPos = calculateRoundCelestialPosition(time, false);
+    
+    // Simple circular rendering for sun/moon
+    float sunDist = length(fragTexcoord - sunPos);
+    float moonDist = length(fragTexcoord - moonPos);
+    
+    if (sunDist < 0.05) {
+        skyColor = mix(skyColor, SUNLIGHT_COLOR, 1.0 - sunDist * 20.0);
+    }
+    if (moonDist < 0.05) {
+        skyColor = mix(skyColor, MOONLIGHT_COLOR, 1.0 - moonDist * 20.0);
+    }
+    
     colortex0 = vec4(skyColor, 1.0);
 }
 

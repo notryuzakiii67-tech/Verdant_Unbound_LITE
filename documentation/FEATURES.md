@@ -19,12 +19,12 @@
 - **Improved underwater lighting**: Water-specific adjustments
 - **Weather-dependent ambient lighting**: Rain/snow/thunderstorm effects
 
-### 2. Shadow System
+### 2. Shadow System (Super Good Lightweight)
 - **Directional shadows**: Efficient shadow mapping
 - **Moving tree shadows**: Dynamic shadow updates
 - **Building shadows**: Static shadow mapping
 - **Player and entity shadows**: Supported where available
-- **Soft shadow filtering**: Lightweight PCF approximation
+- **Super good lightweight shadow filtering**: Improved 8-sample PCF approximation (better than previous but still optimized for 940MX)
 - **Configurable shadow distance**: Adjustable 4-16 blocks
 - **Adjustable shadow quality**: Low/Medium/High options
 - **Distance-based shadow optimization**: Performance optimization
@@ -32,12 +32,12 @@
 - **Weather-dependent shadow behavior**: Rain/snow effects
 - **Sun and moon shadow direction**: Dynamic direction
 
-### 3. Water System
+### 3. Water System (Lightweight Reflection)
 - **Transparent water**: Configurable transparency
 - **Animated water surface**: Efficient sine wave animation
 - **Efficient animated normal maps**: Simplified normal animation
 - **Fresnel reflections**: Approximate screen-space reflections
-- **Approximate screen-space reflections**: Lightweight fallback
+- **Lightweight water reflection**: Simplified screen-space approximation with limited samples (Complementary Unbound style)
 - **Sunlight reflections**: Dynamic reflection calculation
 - **Water depth coloring**: Depth-based color variation
 - **Underwater fog**: Dimension-specific fog
@@ -49,9 +49,9 @@
 - **Rain-dependent wet appearance**: Weather-based effects
 - **Improved ice shading**: Material-specific adjustments
 
-### 4. Sky System
-- **Realistic sun**: Dynamic sun position
-- **Realistic moon**: Dynamic moon position
+### 4. Sky System (3D Aurora, Godrays, Round Sun/Moon)
+- **Realistic sun (Round shape)**: Complementary Unbound style circular rendering
+- **Realistic moon (Round shape)**: Complementary Unbound style circular rendering
 - **Stars**: Configurable star rendering
 - **Atmospheric horizon**: Gradient-based horizon
 - **Sunrise gradients**: Time-dependent gradients
@@ -63,6 +63,8 @@
 - **Sun glow**: Simplified glow approximation
 - **Subtle atmospheric scattering approximation**: Lightweight scattering
 - **Smooth day/night transitions**: Time-based transitions
+- **3D Animated Aurora Effect**: Lightweight 3D approximation (no expensive volumetric ray marching)
+- **Godrays (Lightweight)**: Simplified screen-space approximation (6 steps)
 
 ### 5. Cloud System
 - **Animated clouds**: 2D/2.5D animation approximation

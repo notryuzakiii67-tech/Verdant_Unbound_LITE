@@ -18,24 +18,26 @@ ambient_occlusion=medium
 light_intensity=1.0
 color_grading=true
 
-# Shadows
+# Shadows (Super Good Lightweight)
 shadow_quality=medium
 shadow_distance=8
 soft_shadows=true
 entity_shadows=true
 
-# Water
+# Water (Lightweight Reflection)
 water_quality=medium
 reflections=true
 water_animation=true
 underwater_effects=true
 
-# Clouds and Sky
+# Clouds and Sky (3D Aurora, Godrays, Round Sun/Moon)
 cloud_quality=medium
 cloud_animation=true
 cloud_shadows=true
 sky_effects=true
 stars=true
+aurora_effect=true
+godrays=true
 
 # Environment
 fog=true

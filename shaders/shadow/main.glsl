@@ -1,13 +1,14 @@
 # Shadow Pass Shaders
 # Verdant — Unbound Lite
 # Efficient shadow mapping for NVIDIA GeForce 940MX
+# Super good but lightweight shadows (8-sample PCF)
 
 # Vertex Shader - Shadow
 # shadow.vsh
 
 #version 330 core
 
-#include "includes/common.glsl"
+#include "../includes/common.glsl"
 
 in vec3 position;
 
@@ -24,7 +25,7 @@ void main() {
 
 #version 330 core
 
-#include "includes/common.glsl"
+#include "../includes/common.glsl"
 
 out float shadowtex0;
 
@@ -48,7 +49,7 @@ void main() {
 
 #version 330 core
 
-#include "includes/common.glsl"
+#include "../includes/common.glsl"
 
 in vec2 position;
 in vec2 texcoord;
@@ -65,7 +66,7 @@ void main() {
 
 #version 330 core
 
-#include "includes/common.glsl"
+#include "../includes/common.glsl"
 
 in vec2 fragTexcoord;
 
@@ -78,21 +79,21 @@ uniform float shadowQuality;
 uniform bool softShadows;
 uniform bool masterToggle;
 
-// Efficient shadow filtering for 940MX
-float calculateShadowFiltering(sampler2D shadowMap, vec2 coord, float quality) {
-    // Simplified PCF (Percentage Closer Filtering)
-    // Reduced sample count for performance
-    float shadow = texture2D(shadowMap, coord).r;
+// Super Good Lightweight Shadow Filtering (8-sample PCF)
+float calculateSuperGoodShadow(sampler2D shadowMap, vec2 coord, float quality) {
+    // Improved 8-tap PCF for "super good" but lightweight filtering
+    // Optimized for 940MX memory constraints
+    float shadow = 0.0;
+    float offset = SHADOW_SOFTNESS * quality;
     
-    if (softShadows) {
-        // Lightweight soft shadow approximation
-        float offset = 0.001 * quality;
-        float sample1 = texture2D(shadowMap, coord + vec2(offset, 0.0)).r;
-        float sample2 = texture2D(shadowMap, coord - vec2(offset, 0.0)).r;
-        float sample3 = texture2D(shadowMap, coord + vec2(0.0, offset)).r;
-        float sample4 = texture2D(shadowMap, coord - vec2(0.0, offset)).r;
-        shadow = (shadow + sample1 + sample2 + sample3 + sample4) / 5.0;
+    // Lightweight 8-sample PCF approximation (Super Good but Lightweight)
+    // Better than previous 4-sample, but still optimized for 940MX
+    for (int i = 0; i < SHADOW_SAMPLES; i++) {
+        float dx = (float((i % 3) - 1)) * offset;
+        float dy = (float((i / 3) - 1)) * offset;
+        shadow += texture2D(shadowMap, coord + vec2(dx, dy)).r;
     }
+    shadow /= float(SHADOW_SAMPLES);
     
     return shadow;
 }
@@ -103,8 +104,8 @@ void main() {
         return;
     }
     
-    // Efficient shadow calculation
-    float shadow = calculateShadowFiltering(shadowtex0, fragTexcoord, shadowQuality);
+    // Super Good Lightweight shadow calculation
+    float shadow = calculateSuperGoodShadow(shadowtex0, fragTexcoord, shadowQuality);
     
     // Distance-based optimization
     float distanceFactor = min(fragTexcoord.x, fragTexcoord.y) / shadowDistance;

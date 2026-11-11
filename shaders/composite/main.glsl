@@ -98,8 +98,8 @@ void main() {
     vec3 normal = normalize(normalData.rgb);
     vec3 material = materialData.rgb;
     
-    // Read shadow data
-    float shadow = texture2D(shadowcolor0, fragTexcoord).r;
+    // Read shadow data and apply Super Good Lightweight Shadow (8-sample)
+    float shadow = calculateShadow(shadowcolor0, fragTexcoord, SHADOW_BIAS, 1.0);
     
     // Calculate lighting
     vec3 lighting = calculateDeferredLighting(albedo, normal, vec3(0.0), shadow);
@@ -214,10 +214,10 @@ void main() {
             animatedCoord = animateWaterSurface(fragTexcoord, time);
         }
         
-        // Water reflections (simplified screen-space approximation)
+        // Water reflections (Lightweight 5-sample screen-space approximation)
         vec3 reflectionColor = vec3(0.0);
         if (reflections) {
-            reflectionColor = colortex0.rgb * 0.1;  // Simplified reflection
+            reflectionColor = calculateWaterReflection(colortex4_in, animatedCoord, waterQuality ? 1.0 : 0.5);
         }
         
         // Water quality adjustment
