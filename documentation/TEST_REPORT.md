@@ -4,7 +4,7 @@
 ### Testing Status
 - **Date**: 2026-11-11
 - **Branch**: `arena/6c1c470a-verdant-unbound-lite`
-- **Commit**: `205320115b6c94eeec87b780a8d2916a4eb4ff8a`
+- **Commit**: `5a3169b` (v1.1.0 integration)
 - **Target Hardware**: ASUS X405UQ (NVIDIA GeForce 940MX, Intel Core i5 7th gen, 8 GB RAM)
 - **Minecraft Version**: 1.21.11
 - **Shader Loader**: Iris
@@ -14,19 +14,19 @@
 ### Validation Checklist
 
 #### 1. Shader File Existence
-- [x] `shaders/shaders.properties`: Configuration file
-- [x] `shaders/gbuffers/main.glsl`: Geometry pass shaders
-- [x] `shaders/composite/main.glsl`: Post-processing shaders
+- [x] `shaders/shaders.properties`: Configuration file (v1.1.0 with Aurora/Godray/Reflection/Super Good Shadow options)
+- [x] `shaders/gbuffers/main.glsl`: Geometry pass shaders (integrated Aurora, Godrays, Round Sun/Moon)
+- [x] `shaders/composite/main.glsl`: Post-processing shaders (integrated Super Good Shadows, Water Reflection)
 - [x] `shaders/final/main.glsl`: Final output shader (included in composite)
-- [x] `shaders/shadow/main.glsl`: Shadow mapping shaders
-- [x] `shaders/includes/common.glsl`: Shared GLSL functions
+- [x] `shaders/shadow/main.glsl`: Shadow mapping shaders (8-sample Super Good Lightweight)
+- [x] `shaders/includes/common.glsl`: Shared GLSL functions (Aurora, Godrays, Reflection, Shadows, Round Celestial)
 - [x] `shaders/includes/vegetation.glsl`: Vegetation system
 - [x] `shaders/includes/weather.glsl`: Weather system
 - [x] `shaders/includes/material.glsl`: Material system
 - [x] `shaders/includes/postprocessing.glsl`: Post-processing system
-- [x] `shaders/sky/main.glsl`: Sky and cloud shaders
+- [x] `shaders/sky/main.glsl`: Sky and cloud shaders (Aurora, Godrays, Round Sun/Moon)
 - [x] `shaders/sky/clouds.glsl`: Cloud system shaders
-- [x] `shaders/water/main.glsl`: Water system shaders
+- [x] `shaders/water/main.glsl`: Water system shaders (Lightweight Reflection)
 - [x] `shaders/lighting/main.glsl`: Lighting system shaders
 - [x] `shaders/dimensions/main.glsl`: Dimension support shaders
 
@@ -82,14 +82,14 @@
 
 #### 10. Shadow Artifact Validation
 - [x] Shadow mapping: Properly configured
-- [x] Shadow filtering: Simplified PCF
+- [x] Shadow filtering: Simplified PCF (8-sample Super Good Lightweight)
 - [x] Distance-based optimization: Implemented
 - [x] No obvious artifacts: Validated (static inspection)
 
 #### 11. Water Rendering Validation
 - [x] Water transparency: Configured
 - [x] Water animation: Implemented
-- [x] Water reflections: Simplified approximation
+- [x] Water reflections: Simplified approximation (5-sample screen-space blend)
 - [x] Underwater effects: Configured
 - [x] No water rendering failures: Validated (static inspection)
 
@@ -102,7 +102,7 @@
 #### 13. Preset Selection Validation
 - [x] Potato preset: Functional configuration
 - [x] Lite preset: Functional configuration
-- [x] Balanced Ultra-Lite preset: Functional configuration
+- [x] Balanced Ultra-Lite preset: Functional configuration (v1.1.0 updated with Aurora, Godrays, Reflection, Shadows, Round Sun/Moon)
 - [x] Quality preset: Functional configuration
 - [x] No broken preset selection: Validated
 
@@ -133,11 +133,11 @@
 - **Texture References**: All textures referenced
 - **Framebuffer Declarations**: All framebuffers declared
 - **Transparency Handling**: All transparency configured
-- **Shadow Mapping**: All shadow mapping configured
-- **Water Rendering**: All water rendering configured
+- **Shadow Mapping**: All shadow mapping configured (8-sample Super Good Lightweight)
+- **Water Rendering**: All water rendering configured (5-sample screen-space reflection)
 - **Dimension Rendering**: All dimension rendering configured
-- **Preset Selection**: All presets configured
-- **Setting Toggles**: All toggles configured
+- **Preset Selection**: All presets configured (Balanced Ultra-Lite updated to v1.1.0)
+- **Setting Toggles**: All toggles configured (Aurora, Godrays, Reflection, Shadows, Round Sun/Moon)
 - **Shader Reload**: All reload functionality configured
 
 #### Physical Testing (Pending)
