@@ -1,0 +1,76 @@
+MIT License
+
+Copyright (c) 2026 Verdant Team
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Components and Assets
+
+### Complementary Unbound (Visual Reference Only)
+- **Status**: Visual reference only
+- **Usage**: No proprietary assets or code copied
+- **Implementation**: Original shader code and implementation
+- **Attribution**: Complementary Unbound is a visual reference only
+
+### Iris Shader Loader
+- **Status**: Compatible implementation
+- **Usage**: Iris-specific shaderpack format
+- **Attribution**: IrisShaders/Iris (https://github.com/IrisShaders/Iris)
+
+### Sodium Renderer
+- **Status**: Compatible implementation
+- **Usage**: Sodium-specific rendering pipeline
+- **Attribution**: Sodium development team
+
+### Fabulously Optimized Modpack
+- **Status**: Compatible implementation
+- **Usage**: Fabulously Optimized 1.21.11 compatibility
+- **Attribution**: Fabulously-Optimized/fabulously-optimized (https://github.com/Fabulously-Optimized/fabulously-optimized)
+
+### Minecraft Java 1.21.11
+- **Status**: Target platform
+- **Usage**: Minecraft Java 1.21.11 compatibility
+- **Attribution**: Mojang Studios
+
+### NVIDIA GeForce 940MX
+- **Status**: Target hardware
+- **Usage**: NVIDIA GeForce 940MX optimization
+- **Attribution**: NVIDIA Corporation
+
+### ASUS X405UQ
+- **Status**: Target device
+- **Usage**: ASUS X405UQ optimization
+- **Attribution**: ASUS Corporation
+
+---
+
+## Original Implementation
+- **Shader Source Code**: Original implementation by Verdant Team
+- **Configuration Files**: Original implementation by Verdant Team
+- **Documentation**: Original implementation by Verdant Team
+- **Presets**: Original implementation by Verdant Team
+- **Project Structure**: Original implementation by Verdant Team
+
+## Contact Information
+- **Repository**: `notryuzakiii67-tech/Verdant_Unbound_LITE`
+- **Branch**: `arena/6c1c470a-verdant-unbound-lite`
+- **Support**: Arena.ai Agent Mode
+- **Date**: 2026-11-11

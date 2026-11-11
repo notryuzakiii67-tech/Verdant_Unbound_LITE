@@ -1,0 +1,64 @@
+# POTATO Preset - Extremely Low-End Hardware
+# Target: Minimal performance impact while retaining recognizable appearance
+
+# Main Settings
+preset.name=Potato
+preset.description=Extremely low-end hardware optimization
+preset.target_hardware=Intel Core i5 7th gen / NVIDIA GeForce 940MX / 8GB RAM
+
+# Quality Settings
+quality.preset=potato
+master_toggle=true
+performance_mode=true
+
+# Lighting
+sunlight_quality=low
+moonlight=false
+ambient_occlusion=off
+light_intensity=0.8
+color_grading=false
+
+# Shadows
+shadow_quality=low
+shadow_distance=4
+soft_shadows=false
+entity_shadows=false
+
+# Water
+water_quality=low
+reflections=false
+water_animation=false
+underwater_effects=false
+
+# Clouds and Sky
+cloud_quality=low
+cloud_animation=false
+cloud_shadows=false
+sky_effects=false
+stars=false
+
+# Environment
+fog=false
+vegetation_movement=false
+rain_effects=false
+snow_effects=false
+weather_lighting=false
+
+# Post-processing
+bloom=false
+tonemapping=false
+exposure=1.0
+vignette=false
+color_saturation=1.0
+contrast=1.0
+
+# Performance
+performance_mode_advanced=true
+reduced_resolution_effects=true
+shadow_optimization=true
+effect_toggles=true
+
+# Dimension Support
+dimension.overworld.enabled=true
+dimension.nether.enabled=false
+dimension.end.enabled=false

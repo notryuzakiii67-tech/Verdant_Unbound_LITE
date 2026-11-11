@@ -1,0 +1,64 @@
+# QUALITY Preset - Better Visuals (Low-End GPU Aware)
+# Target: Improved visuals while maintaining low-end GPU awareness
+
+# Main Settings
+preset.name=Quality
+preset.description=Better visuals while maintaining low-end GPU awareness
+preset.target_hardware=Intel Core i5 7th gen / NVIDIA GeForce 940MX / 8GB RAM
+
+# Quality Settings
+quality.preset=quality
+master_toggle=true
+performance_mode=false
+
+# Lighting
+sunlight_quality=high
+moonlight=true
+ambient_occlusion=high
+light_intensity=1.1
+color_grading=true
+
+# Shadows
+shadow_quality=high
+shadow_distance=12
+soft_shadows=true
+entity_shadows=true
+
+# Water
+water_quality=high
+reflections=true
+water_animation=true
+underwater_effects=true
+
+# Clouds and Sky
+cloud_quality=high
+cloud_animation=true
+cloud_shadows=true
+sky_effects=true
+stars=true
+
+# Environment
+fog=true
+vegetation_movement=true
+rain_effects=true
+snow_effects=true
+weather_lighting=true
+
+# Post-processing
+bloom=true
+tonemapping=true
+exposure=1.0
+vignette=true
+color_saturation=1.1
+contrast=1.1
+
+# Performance
+performance_mode_advanced=false
+reduced_resolution_effects=false
+shadow_optimization=false
+effect_toggles=false
+
+# Dimension Support
+dimension.overworld.enabled=true
+dimension.nether.enabled=true
+dimension.end.enabled=true

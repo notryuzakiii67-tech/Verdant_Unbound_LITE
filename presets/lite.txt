@@ -1,0 +1,64 @@
+# LITE Preset - Maximum Practical Performance
+# Target: Balance between performance and visual quality
+
+# Main Settings
+preset.name=Lite
+preset.description=Maximum practical performance
+preset.target_hardware=Intel Core i5 7th gen / NVIDIA GeForce 940MX / 8GB RAM
+
+# Quality Settings
+quality.preset=lite
+master_toggle=true
+performance_mode=true
+
+# Lighting
+sunlight_quality=medium
+moonlight=true
+ambient_occlusion=low
+light_intensity=1.0
+color_grading=true
+
+# Shadows
+shadow_quality=low
+shadow_distance=6
+soft_shadows=false
+entity_shadows=true
+
+# Water
+water_quality=medium
+reflections=true
+water_animation=true
+underwater_effects=false
+
+# Clouds and Sky
+cloud_quality=medium
+cloud_animation=true
+cloud_shadows=false
+sky_effects=true
+stars=true
+
+# Environment
+fog=true
+vegetation_movement=true
+rain_effects=true
+snow_effects=false
+weather_lighting=true
+
+# Post-processing
+bloom=false
+tonemapping=true
+exposure=1.0
+vignette=false
+color_saturation=1.0
+contrast=1.0
+
+# Performance
+performance_mode_advanced=true
+reduced_resolution_effects=true
+shadow_optimization=true
+effect_toggles=true
+
+# Dimension Support
+dimension.overworld.enabled=true
+dimension.nether.enabled=true
+dimension.end.enabled=false
